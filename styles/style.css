@@ -1,17 +1,16 @@
 :root {
-  --main-bluegreen: #e0f7fa;
-  --accent-blue: #e3f0ff;
-  --button-blue: #90caf9;
-  --text-dark: #22577a;
+  --main-beige: #f9ecd7; /* 柴犬米色 */
+  --accent-brown: #c8a97e; /* 淺棕 */
+  --button-brown: #a67c52; /* 深棕 */
+  --text-dark: #5a3e1b; /* 深棕文字 */
+  --white: #fffaf3; /* 柴犬白 */
 }
 
 body {
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans",
     "Helvetica Neue", Arial;
   padding: 24px;
-  background: var(--main-bluegreen)
-    url("https://images.unsplash.com/photo-1504208434309-cb69f4fe52b0?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
-    center/cover no-repeat fixed;
+  background: var(--main-beige);
   min-height: 100vh;
 }
 
@@ -19,10 +18,11 @@ body {
   max-width: 540px;
   margin: 32px auto;
   padding: 24px;
-  border-radius: 16px;
-  box-shadow: 0 8px 24px rgba(90, 62, 27, 0.1);
-  background: rgba(224, 247, 250, 0.93); /* 主色系半透明 */
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(168, 124, 82, 0.13);
+  background: var(--white);
   color: var(--text-dark);
+  border: 2px solid var(--accent-brown);
   backdrop-filter: blur(2px);
 }
 
@@ -30,7 +30,7 @@ label {
   display: block;
   margin: 12px 0 8px;
   font-weight: 600;
-  color: var(--text-dark);
+  color: var(--accent-brown);
 }
 
 input,
@@ -39,9 +39,9 @@ button {
   width: 100%;
   padding: 12px;
   border-radius: 8px;
-  border: 1px solid #90caf9;
+  border: 1.5px solid var(--accent-brown);
   font-size: 16px;
-  background: #fff;
+  background: var(--white);
   color: var(--text-dark);
   box-sizing: border-box;
 }
@@ -49,40 +49,41 @@ button {
 button {
   cursor: pointer;
   margin-top: 16px;
-  background: var(--button-blue);
-  color: var(--text-dark);
+  background: var(--button-brown);
+  color: #fffaf3;
   border: none;
   font-weight: bold;
   transition: background 0.2s;
 }
+
 button:hover {
-  background: #64b5f6;
+  background: #c8a97e;
 }
 
 .result {
   margin-top: 18px;
   padding: 14px;
   border-radius: 8px;
-  background: var(--accent-blue);
-  border: 1px solid #90caf9;
+  background: var(--accent-brown);
+  border: 1.5px solid var(--button-brown);
   min-height: 56px;
-  color: var(--text-dark);
+  color: #fffaf3;
   font-size: 17px;
 }
 
 .small {
   font-size: 13px;
-  color: #22577a;
+  color: var(--accent-brown);
   margin-top: 10px;
 }
 
 a {
-  color: #1976d2;
+  color: var(--button-brown);
   text-decoration: underline;
 }
 
 h2 {
-  color: #1565c0;
-  text-shadow: 0 2px 8px #e3f0ff;
+  color: var(--button-brown);
+  text-shadow: 0 2px 8px #f9ecd7;
   margin-bottom: 18px;
 }
